@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - TanOffice.de</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="kontakt.html" class="contact-button">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Kontakt</h1>
+                <p>Nehmen Sie Kontakt mit uns auf</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <h2>Kontaktinformationen</h2>
+                        
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope fa-2x"></i>
+                            <div>
+                                <h3>E-Mail</h3>
+                                <a href="mailto:Support@TanOffice.de">Support@TanOffice.de</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone fa-2x"></i>
+                            <div>
+                                <h3>Telefon</h3>
+                                <p>(0 65 41) 177 60 45</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-map-marker-alt fa-2x"></i>
+                            <div>
+                                <h3>Adresse</h3>
+                                <p>Sponheimer Str. 8<br>56841 Traben-Trarbach<br>DE</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock fa-2x"></i>
+                            <div>
+                                <h3>Bürozeiten</h3>
+                                <p>Mo - Fr: 10:00 - 16:00 Uhr<br>Sa: Nach Vereinbarung</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h2>Nachricht senden</h2>
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="dfab393d-cd37-472f-87cb-5fb16828065f">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Unternehmen</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Betreff</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Nachricht *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Nachricht senden
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TanOffice - Powered by Daniel Foth</p>
+        </div>
+    </footer>
+</body>
+</html>
