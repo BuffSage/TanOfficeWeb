@@ -742,6 +742,151 @@ footer {
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
 
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.pricing-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.pricing-intro h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.pricing-intro h2::after {
+    content: '';
+    display: block;
+    margin: 16px auto 0 auto;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-top: 4px solid #FFD700;
+}
+
+.pricing-header {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+}
+
+.pricing-header i {
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.pricing-body {
+    padding: 2rem;
+}
+
+.price {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD700;
+    display: block;
+}
+
+.price-details {
+    text-align: center;
+    color: #666;
+}
+
+.price-details i {
+    color: #FFD700;
+    margin-right: 0.5rem;
+}
+
+.support-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.support-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    border-left: 4px solid #FFD700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.support-item h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.support-item .price-amount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-left: 1rem;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.price-info .price-amount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.price-info .price-detail {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
 /* Mobile Responsiveness for new pages */
 @media (max-width: 768px) {
     .team-member {
@@ -763,5 +908,24 @@ footer {
     
     .requirements {
         text-align: left;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .support-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .support-item .price-amount {
+        margin-left: 0;
+    }
+    
+    .price-info {
+        align-items: center;
+        text-align: center;
     }
 }
