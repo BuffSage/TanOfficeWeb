@@ -190,3 +190,23 @@ document.addEventListener('mouseout', function(e) {
         card.style.background = 'white';
     }
 });
+
+// Mobile navigation toggle function
+function toggleMobileNav() {
+    const nav = document.getElementById('mobile-nav');
+    const toggle = document.querySelector('.mobile-nav-toggle');
+    
+    nav.classList.toggle('show');
+    toggle.classList.toggle('active');
+    
+    // Close nav when clicking outside
+    document.addEventListener('click', function closeNav(e) {
+        if (!e.target.closest('nav')) {
+            nav.classList.remove('show');
+            toggle.classList.remove('active');
+            document.removeEventListener('click', closeNav);
+        }
+    });
+}
+
+// Suggestion bar is now permanent - no close functionality needed
