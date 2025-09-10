@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechtliches - TanOffice.de</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
+            <nav>
+                <button class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="mobile-nav">
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="kontakt.html" class="contact-button">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="contact-text">Kontakt</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="legal-tabs-section">
+            <div class="container">
+                <h1>Rechtliches</h1>
+                <p>Impressum, Datenschutz und Geschäftsbedingungen</p>
+                
+                <div class="legal-card">
+                    <div class="tab-navigation">
+                        <button class="tab-button active" onclick="showTab('impressum')">Impressum</button>
+                        <button class="tab-button" onclick="showTab('datenschutz')">Datenschutz</button>
+                        <button class="tab-button" onclick="showTab('agb')">AGB</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <!-- Impressum Tab -->
+                        <div id="impressum" class="tab-panel active">
+                            <h2>Impressum</h2>
+                            <h3>Angaben gemäß § 5 TMG</h3>
+                            <p><strong>Daniel Foth</strong><br>
+                            Sponheimer Str. 8<br>
+                            56841 Traben-Trarbach<br>
+                            Deutschland</p>
+
+                            <h4>Kontakt</h4>
+                            <p>E-Mail: Support@TanOffice.de</p>
+
+                            <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4>
+                            <p>Daniel Foth<br>
+                            Sponheimer Str. 8<br>
+                            56841 Traben-Trarbach</p>
+
+                            <h4>Haftungsausschluss</h4>
+                            <h5>Haftung für Inhalte</h5>
+                            <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+
+                            <h5>Haftung für Links</h5>
+                            <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
+
+                            <h5>Urheberrecht</h5>
+                            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+                        </div>
+
+                        <!-- Datenschutz Tab -->
+                        <div id="datenschutz" class="tab-panel">
+                            <h2>Datenschutzerklärung</h2>
+                            
+                            <h3>1. Verantwortlicher</h3>
+                            <p>Verantwortlicher für die Datenverarbeitung auf dieser Website ist:</p>
+                            <p>Daniel Foth<br>
+                            Sponheimer Str. 8<br>
+                            56841 Traben-Trarbach<br>
+                            Deutschland<br>
+                            E-Mail: Support@TanOffice.de</p>
+
+                            <h3>2. Cookies</h3>
+                            <p><strong>Wir verwenden keine Cookies auf dieser Website.</strong> Unsere Website funktioniert vollständig ohne die Verwendung von Cookies oder ähnlichen Tracking-Technologien.</p>
+
+                            <h3>3. Datenerhebung und -verwendung</h3>
+                            <p>Wir erheben personenbezogene Daten nur dann, wenn Sie uns diese freiwillig zur Verfügung stellen, beispielsweise über unser Kontaktformular oder per E-Mail.</p>
+
+                            <h4>3.1 Kontaktformular</h4>
+                            <p>Wenn Sie unser Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage verwendet. Die Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+                            <h4>3.2 Server-Log-Dateien</h4>
+                            <p>Beim Besuch unserer Website werden automatisch Informationen gespeichert: IP-Adresse, Datum und Uhrzeit des Zugriffs, Name der aufgerufenen Datei, Website von der aus der Zugriff erfolgte, verwendeter Browser und Betriebssystem.</p>
+
+                            <h3>4. Ihre Rechte</h3>
+                            <p>Sie haben Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gemäß DSGVO.</p>
+
+                            <h3>5. Datensicherheit</h3>
+                            <p>Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten.</p>
+                        </div>
+
+                        <!-- AGB Tab -->
+                        <div id="agb" class="tab-panel">
+                            <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+                            
+                            <h3>1. Geltungsbereich</h3>
+                            <p>Diese AGB gelten für alle Verträge zwischen Daniel Foth und seinen Kunden bezüglich der TanOffice Software und damit verbundener Dienstleistungen.</p>
+
+                            <h3>2. Vertragspartner</h3>
+                            <p>Daniel Foth<br>
+                            Sponheimer Str. 8<br>
+                            56841 Traben-Trarbach<br>
+                            Deutschland</p>
+
+                            <h3>3. Leistungsumfang</h3>
+                            <p>TanOffice ist eine Verwaltungssoftware für Sonnenstudios. Der genaue Leistungsumfang ergibt sich aus der jeweiligen Produktbeschreibung.</p>
+
+                            <h4>3.1 Software-Lizenz</h4>
+                            <p>Der Kunde erhält eine nicht-exklusive, nicht-übertragbare Lizenz zur Nutzung der TanOffice Software.</p>
+
+                            <h4>3.2 Support und Updates</h4>
+                            <p>Support und Updates werden entsprechend der gewählten Supportvereinbarung bereitgestellt.</p>
+
+                            <h3>4. Preise und Zahlungsbedingungen</h3>
+                            <p>Es gelten die aktuellen Preise. Alle Preise verstehen sich zzgl. der gesetzlichen Mehrwertsteuer. Rechnungen sind innerhalb von 14 Tagen zur Zahlung fällig.</p>
+
+                            <h3>5. Gewährleistung</h3>
+                            <p>Für die Software gelten die gesetzlichen Gewährleistungsbestimmungen. Mängel sind innerhalb von 14 Tagen schriftlich anzuzeigen.</p>
+
+                            <h3>6. Haftung</h3>
+                            <p>Die Haftung beschränkt sich auf Vorsatz und grobe Fahrlässigkeit. Eine Haftung für leichte Fahrlässigkeit besteht nur bei Verletzung wesentlicher Vertragspflichten.</p>
+
+                            <h3>7. Schlussbestimmungen</h3>
+                            <p>Es gilt deutsches Recht. Gerichtsstand ist Traben-Trarbach, sofern der Kunde Vollkaufmann ist.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="back-link">
+                    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Zurück zur Startseite</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="leistungen.html">Leistungen</a>
+                    <a href="program.html">Program</a>
+                    <a href="team.html">Team</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <div class="footer-legal">
+                    <a href="rechtliches.html">Rechtliches</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 TanOffice - Powered by <a href="https://danielfoth.de" target="_blank" rel="noopener noreferrer">Daniel Foth</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showTab(tabName) {
+            // Hide all tab panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected tab panel
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
