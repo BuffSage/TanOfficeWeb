@@ -403,6 +403,11 @@ footer {
         padding: 0.5rem 0;
     }
     
+    /* All headers should be below suggestion bar on mobile */
+    header {
+        top: 38px;
+    }
+    
     body.homepage header {
         top: 38px;
     }
@@ -558,20 +563,34 @@ footer {
     }
     
     .hero {
-        padding: 100px 0 60px;
+        padding: 120px 0 60px;
     }
     
     body.homepage .hero {
-        padding: 138px 0 60px;
+        padding: 120px 0 60px;
     }
     
     .page-hero {
-        padding: 100px 0 60px;
+        padding: 120px 0 60px;
     }
     
     .suggestion-bar {
         font-size: 0.9rem;
-        padding: 8px 0;
+        padding: 10px 0;
+        min-height: 50px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Guaranteed header positioning - well below suggestion bar on mobile */
+    header {
+        top: 60px !important;
+    }
+    
+    body.homepage header {
+        top: 60px !important;
     }
 
     .contact-button {
