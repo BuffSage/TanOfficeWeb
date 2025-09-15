@@ -563,15 +563,15 @@ footer {
     }
     
     .hero {
-        padding: 120px 0 60px;
+        padding: 80px 0 60px; /* Normal padding for non-homepage */
     }
     
     body.homepage .hero {
-        padding: 120px 0 60px;
+        padding: 120px 0 60px; /* Extra padding for homepage with suggestion bar */
     }
     
     .page-hero {
-        padding: 120px 0 60px;
+        padding: 80px 0 60px; /* Normal padding for other pages */
     }
     
     .suggestion-bar {
@@ -584,13 +584,13 @@ footer {
         justify-content: center;
     }
     
-    /* Guaranteed header positioning - well below suggestion bar on mobile */
+    /* Mobile header positioning - different for homepage vs other pages */
     header {
-        top: 60px !important;
+        top: 0 !important; /* Other pages: header at top with no suggestion bar */
     }
     
     body.homepage header {
-        top: 60px !important;
+        top: 60px !important; /* Homepage: header below suggestion bar */
     }
 
     .contact-button {
