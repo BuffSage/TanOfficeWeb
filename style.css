@@ -742,6 +742,51 @@ footer {
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+/* Control Systems / Interface note */
+.control-systems-section {
+    padding: 40px 0;
+    background-color: transparent;
+}
+
+.control-card {
+    background: linear-gradient(180deg, #ffffff, #fbfbfb);
+    padding: 1.8rem;
+    border-radius: 15px;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    border-left: 6px solid rgba(255,215,0,0.95);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.control-icon i {
+    color: #FFD700;
+    font-size: 2.6rem;
+}
+
+.control-content h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.control-content p {
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .control-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .control-content .download-btn {
+        margin: 1rem auto 0 auto;
+    }
+}
+
 .service-card i {
     color: #FFD700;
     margin-bottom: 1.5rem;
