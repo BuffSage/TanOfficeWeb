@@ -36,14 +36,25 @@ body {
     top: 0;
     width: 100%;
     z-index: 1002;
-    border-bottom: 3px solid #FFD700;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #FFD700, #FFA500) 1;
+}
+
+.suggestion-bar .suggestion-text {
+    display: inline;
 }
 
 .suggestion-bar a {
     color: #FFD700;
     text-decoration: underline;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .suggestion-bar a:hover {
@@ -576,12 +587,19 @@ footer {
     
     .suggestion-bar {
         font-size: 0.9rem;
-        padding: 10px 0;
+        padding: 10px 15px;
         min-height: 50px;
         box-sizing: border-box;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 5px;
+        border-bottom-width: 2px;
+    }
+    
+    .suggestion-bar .suggestion-text {
+        display: block;
     }
     
     /* Mobile header positioning - different for homepage vs other pages */
@@ -590,7 +608,7 @@ footer {
     }
     
     body.homepage header {
-        top: 60px !important; /* Homepage: header below suggestion bar */
+        top: 73px !important; /* Homepage: header below suggestion bar - precisely positioned to eliminate gap */
     }
 
     .contact-button {
