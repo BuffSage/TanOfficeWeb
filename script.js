@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    renderSiteFooter();
+
     // Add scroll event listener for header transparency
     const header = document.querySelector('header');
     
@@ -106,6 +108,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add particle effect to hero section
     createParticles();
 });
+
+function renderSiteFooter() {
+    const footer = document.getElementById('site-footer');
+
+    if (!footer) {
+        return;
+    }
+
+    const rootPrefix = footer.dataset.rootPrefix || '.';
+    const currentYear = new Date().getFullYear();
+    const toRootPath = (path) => `${rootPrefix}/${path}`;
+
+    footer.innerHTML = `
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="${toRootPath('index.html')}">Home</a>
+                    <a href="${toRootPath('leistungen.html')}">Leistungen</a>
+                    <a href="${toRootPath('download.html')}">Download</a>
+                    <a href="${toRootPath('team.html')}">Team</a>
+                    <a href="${toRootPath('kontakt.html')}">Kontakt</a>
+                </div>
+                <div class="footer-legal">
+                    <a href="${toRootPath('rechtliches.html')}">Rechtliches</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; ${currentYear} TanOffice - Powered by <a href="https://danielfoth.de" target="_blank" rel="noopener noreferrer">Daniel Foth</a> und <a href="https://yondev.com" target="_blank" rel="noopener noreferrer">Yondev</a></p>
+                </div>
+            </div>
+        </div>
+    `;
+}
 
 // Function to scroll to specific section
 function scrollToSection(sectionId) {
