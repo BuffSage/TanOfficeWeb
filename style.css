@@ -1866,8 +1866,25 @@ footer {
     
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
+    .contact-info-card,
+    .contact-form-card {
+        padding: 2rem 1.25rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-info-card h2,
+    .contact-form-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-item {
+        gap: 1rem;
+    }
+
     .downloads-grid {
         grid-template-columns: 1fr;
     }

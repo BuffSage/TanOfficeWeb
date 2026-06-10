@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <!-- Main navigation links -->
                 <div class="footer-nav">
+                    
                     <a href="${path('index.html')}">Home</a>
                     <a href="${path('leistungen.html')}">Leistungen</a>
                     <a href="${path('download.html')}">Download</a>
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <!-- Copyright notice -->
                 <div class="footer-copyright">
-                    <p>&copy; ${currentYear} TanOffice &mdash; Powered by <a href="https://danielfoth.de" target="_blank" rel="noopener noreferrer">Daniel Foth</a></p>
+                    <p> TanOffice &#174; 2026 -&nbsp;Bereitgestellt von <a href="https://danielfoth.de" target="_blank" rel="noopener noreferrer">Daniel Foth</a></p>
                 </div>
 
             </div>
