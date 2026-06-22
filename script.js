@@ -126,6 +126,8 @@ function scrollToSection(sectionId) {
 // Create floating particles in hero section
 function createParticles() {
     const hero = document.querySelector('.hero');
+    if (!hero) return;
+
     const particlesCount = 50;
     
     for (let i = 0; i < particlesCount; i++) {
@@ -195,6 +197,7 @@ document.addEventListener('mouseout', function(e) {
 function toggleMobileNav() {
     const nav = document.getElementById('mobile-nav');
     const toggle = document.querySelector('.mobile-nav-toggle');
+    if (!nav || !toggle) return;
     
     nav.classList.toggle('show');
     toggle.classList.toggle('active');

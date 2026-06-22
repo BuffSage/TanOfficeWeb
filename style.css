@@ -25,6 +25,18 @@ body {
     background-color: #000;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Suggestion Bar */
 .suggestion-bar {
     background: #333;
@@ -762,7 +774,7 @@ footer {
 
 /* Control Systems / Interface note */
 .control-systems-section {
-    padding: 40px 0;
+    padding: 40px 0 10px 0;
     background-color: transparent;
 }
 
@@ -870,16 +882,19 @@ footer {
 .download-btn {
     background: linear-gradient(45deg, #FFD700, #FFA500);
     color: #000;
+    border: none;
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 25px;
     font-weight: 600;
+    font: inherit;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
     margin-top: 1rem;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .download-btn i {
@@ -898,10 +913,81 @@ footer {
 }
 
 .info-section {
+    margin: 16px auto 0 auto;
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 4px solid #FFD700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 80px;
+}
+
+.info-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    position: relative;
+    line-height: 1.2;
+
+}
+
+.info-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.socialmedia-section {
+    margin: 16px auto 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: #fff;
+    border-top: 4px solid #FFD700;
+    color: #333;
+}
+
+.socialmedia-section a {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.socialmedia-section a:active,
+.socialmedia-section a:focus {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+.socialmedia-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    position: relative;
+    line-height: 1.2;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
 }
 
 .requirements {
@@ -917,7 +1003,44 @@ footer {
 }
 
 .req-item i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #111;
     color: #FFD700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.req-item2 {
+    min-height: 92px;
+    padding: 1.2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.req-item2 a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.req-item2 i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #111;
+    color: #FFD700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     font-size: 1.2rem;
 }
 
@@ -1019,6 +1142,11 @@ footer {
     gap: 3rem;
 }
 
+.contact-grid .socialmedia-section {
+    grid-column: 1 / -1;
+    margin-top: 0;
+}
+
 .contact-info-card, .contact-form-card {
     background: white;
     padding: 3rem;
@@ -1035,13 +1163,23 @@ footer {
 .contact-item {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin-bottom: 2rem;
 }
 
 .contact-item i {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #111;
     color: #FFD700;
-    margin-top: 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-top: 0.1rem;
 }
 
 .contact-item h3 {
@@ -1891,6 +2029,14 @@ footer {
     
     .requirements {
         text-align: left;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .socialmedia-section {
+        padding: 1.5rem;
     }
     
     .pricing-grid {

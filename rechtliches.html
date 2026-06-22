@@ -17,7 +17,7 @@
         <div class="container">
             <a href="index.html"><img src="images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
             <nav>
-                <button class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <button type="button" class="mobile-nav-toggle" aria-label="Menü öffnen" onclick="toggleMobileNav()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -44,9 +44,9 @@
 
                 <div class="legal-card">
                     <div class="tab-navigation">
-                        <button class="tab-button active" onclick="showTab('impressum')">Impressum</button>
-                        <button class="tab-button" onclick="showTab('datenschutz')">Datenschutz</button>
-                        <button class="tab-button" onclick="showTab('agb')">AGB</button>
+                        <button type="button" class="tab-button active" onclick="showTab(event, 'impressum')">Impressum</button>
+                        <button type="button" class="tab-button" onclick="showTab(event, 'datenschutz')">Datenschutz</button>
+                        <button type="button" class="tab-button" onclick="showTab(event, 'agb')">AGB</button>
                     </div>
 
                     <div class="tab-content">
@@ -234,7 +234,7 @@
     <script src="script.js"></script>
     <script src="footer.js"></script>
     <script>
-        function showTab(tabName) {
+        function showTab(event, tabName) {
             // Hide all tab panels
             const panels = document.querySelectorAll('.tab-panel');
             panels.forEach(panel => panel.classList.remove('active'));
@@ -244,7 +244,10 @@
             buttons.forEach(button => button.classList.remove('active'));
 
             // Show selected tab panel
-            document.getElementById(tabName).classList.add('active');
+            const selectedPanel = document.getElementById(tabName);
+            if (!selectedPanel) return;
+
+            selectedPanel.classList.add('active');
 
             // Add active class to clicked button
             event.target.classList.add('active');
