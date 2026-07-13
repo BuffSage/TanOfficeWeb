@@ -15,7 +15,7 @@
  *   - Before </body>: <script src="footer.js"></script>
  *
  * For pages in subfolders, change data-root-prefix to "..":
- *   <footer id="site-footer" data-root-prefix=".."></footer
+ *   <footer id="site-footer" data-root-prefix=".."></footer>
  */
 
 document.addEventListener('DOMContentLoaded', function () {
