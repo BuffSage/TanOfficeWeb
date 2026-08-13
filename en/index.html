@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TanOffice.de - Software for Tanning Studios</title>
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="homepage">
+    <div class="suggestion-bar" id="suggestion-bar">
+        <span class="suggestion-text">What would you like to see in TanOffice 8?</span>
+        <a href="https://forms.gle/3qiYYD5gxny9WFyF7" target="_blank" rel="noopener noreferrer">Let us know here.</a>
+    </div>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="../images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
+            <nav>
+                <button type="button" class="mobile-nav-toggle" aria-label="Open menu" onclick="toggleMobileNav()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="mobile-nav">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="contact.html" class="contact-button">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="contact-text">Contact</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">TanOffice</h1>
+                    <p class="fade-in-delay"> The most helpful software for tanning studio management </p>
+                    <button class="cta-button slide-up" onclick="scrollToSection('contact')">Contact us now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="leistungen" class="features">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-id-card fa-3x feature-icon"></i>
+                        <h3>Cards</h3>
+                        <p>In-house membership cards — chip, magnetic stripe or QR code.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-microchip fa-3x feature-icon"></i>
+                        <h3>Control Systems</h3>
+                        <p>Control systems for device management and monitoring.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-chart-line fa-3x feature-icon"></i>
+                        <h3>Optimization</h3>
+                        <p>Analysis and adjustment of your workflows for stable operation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-content">
+                    <p>Got questions about TanOffice? Contact us!</p>
+                    <div class="contact-info">
+                        <a href="mailto:Support@TanOffice.de" class="email-link">Support@TanOffice.de</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-cta">
+            <div class="container">
+                <div class="download-cta-inner">
+                    <span class="download-cta-text">Looking for downloads?</span>
+                    <a href="download.html" class="download-arrow-btn" aria-label="Go to downloads">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer" data-root-prefix=".."></footer>
+
+    <script src="../script.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

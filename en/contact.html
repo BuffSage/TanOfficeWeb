@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TanOffice.de</title>
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="../images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
+            <nav>
+                <button type="button" class="mobile-nav-toggle" aria-label="Open menu" onclick="toggleMobileNav()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="mobile-nav">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="contact.html" class="contact-button">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="contact-text">Contact</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact</h1>
+                <p>Get in touch with us</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <h2>Contact Information</h2>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope fa-2x"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:Support@TanOffice.de">Support@TanOffice.de</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone fa-2x"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p> (+49) 654 1863 9010 </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-map-marker-alt fa-2x"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Sponheimer Str. 8<br>56841 Traben-Trarbach<br>Germany</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock fa-2x"></i>
+                            <div>
+                                <h3>Office Hours</h3>
+                                <p>Mon - Fri: 10:00 - 16:00<br>Sat: By appointment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h2>Send a Message</h2>
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="dfab393d-cd37-472f-87cb-5fb16828065f">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Send message
+                            </button>
+                        </form>
+                    </div>
+                    <div class="socialmedia-section">
+                        <h3>Social Media</h3>
+                        <div class="social-links">
+                            <div class="req-item2">
+                                <a href="https://www.youtube.com/@TanOfficeMedia" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <span>@TanOfficeMedia</span>
+                                </a>
+                            </div>
+                            <div class="req-item2">
+                                <a href="https://www.instagram.com/tanofficemedia/" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span>@TanOfficeMedia</span>
+                                </a>
+                            </div>
+                            <div class="req-item2">
+                                <a href="https://www.youtube.com/playlist?list=PLxU2TFVE_fE9gV3ex7AW04G63NDRaw31u" target="_blank" rel="noopener">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                    <span>TanOffice 7 Tutorial (How-To)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer" data-root-prefix=".."></footer>
+
+    <script src="../script.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

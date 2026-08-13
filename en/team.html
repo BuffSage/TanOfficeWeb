@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - TanOffice.de</title>
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="../images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
+            <nav>
+                <button type="button" class="mobile-nav-toggle" aria-label="Open menu" onclick="toggleMobileNav()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="mobile-nav">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="contact.html" class="contact-button">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="contact-text">Contact</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Team</h1>
+                <p>The people behind TanOffice</p>
+            </div>
+        </section>
+
+        <section class="team-members">
+            <div class="container">
+                <h2>Our Team</h2>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <i class="fa-solid fa-user-tie fa-6x"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Daniel Foth</h3>
+                            <h4>Management</h4>
+                            <p>Daniel has been part of the team for over 18 years. In 2025 he founded a new company and has been successfully running TanOffice ever since. With many years of experience in software development and deep knowledge of the tanning industry, Daniel and his team develop modern solutions that meet customer requirements and current standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <i class="fa-solid fa-user-graduate fa-6x"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Lukas Henderson</h3>
+                            <h4>Apprentice</h4>
+                            <p>Lukas is our talented apprentice with a special passion for IoT technologies. He brings fresh ideas and modern approaches to our team and is ready to embrace the challenges of digital transformation.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <i class="fa-solid fa-user-nurse fa-6x"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Elke Hensler</h3>
+                            <h4>Accountant</h4>
+                            <p>Elke has been a reliable pillar of our accounting department for many years.
+                                With great care and structure she ensures accurate finances,
+                                invoicing and compliance with all standards,
+                                thereby laying the foundation for stability and innovation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer" data-root-prefix=".."></footer>
+
+    <script src="../script.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

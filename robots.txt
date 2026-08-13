@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /download/
+Disallow: /downloads/
+
+Sitemap: https://www.tanoffice.de/sitemap.xml

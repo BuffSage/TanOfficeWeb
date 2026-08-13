@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Seite nicht gefunden | TanOffice.de</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .error-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-inner {
+            max-width: 560px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        .error-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .error-desc {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+        }
+        .error-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+        }
+        .error-btn-ghost {
+            background: transparent;
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            text-decoration: none;
+            padding: 11px 26px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .error-btn-ghost:hover {
+            background: #FFD700;
+            color: #000;
+            transform: translateY(-2px);
+        }
+        .error-icon {
+            font-size: 4rem;
+            color: #FFD700;
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="images/TSTlogoSep.png" alt="TanOffice Logo" class="logo"></a>
+            <nav>
+                <ul id="mobile-nav">
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="kontakt.html" class="contact-button">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="contact-text">Kontakt</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="error-page">
+            <div class="error-inner">
+                <div class="error-icon">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="error-code">404</div>
+                <h1 class="error-title">Seite nicht gefunden</h1>
+                <p class="error-desc">
+                    Diese Seite existiert leider nicht oder wurde verschoben.<br>
+                    Kehren Sie zur Startseite zurück oder schauen Sie sich unsere Leistungen an.
+                </p>
+                <div class="error-actions">
+                    <a href="index.html" class="error-btn">
+                        <i class="fa-solid fa-house"></i> Zur Startseite
+                    </a>
+                    <a href="kontakt.html" class="error-btn-ghost">
+                        <i class="fa-solid fa-envelope"></i> Kontakt
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="site-footer" data-root-prefix="."></footer>
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>
