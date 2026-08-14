@@ -1,0 +1,144 @@
+/* TanOffice theme for the self-hosted Klaro consent manager. */
+.klaro {
+    --font-family: inherit;
+    --title-font-family: inherit;
+    --font-size: 15px;
+    --dark1: #0b0b0b;
+    --dark2: #292929;
+    --dark3: #b8b8b8;
+    --light1: #f7f7f7;
+    --light2: #555;
+    --light3: #bbb;
+    --green1: #ffd700;
+    --green2: #ffa500;
+    --green3: #ffe766;
+    --blue1: #ffd700;
+    --blue2: #ffd700;
+    --button-text-color: #111;
+    --border-radius: 12px;
+    --notice-max-width: 460px;
+}
+
+.klaro .cookie-notice,
+.klaro .cookie-modal .cm-modal {
+    background: linear-gradient(145deg, #050505 0%, #171717 100%);
+    border: 1px solid rgba(255, 215, 0, 0.55);
+    border-top: 4px solid #ffd700;
+    border-radius: 14px;
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.5), 0 4px 18px rgba(255, 215, 0, 0.14);
+}
+
+.klaro .cookie-modal .cm-bg {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(3px);
+}
+
+.klaro .cookie-notice .cn-body {
+    padding: 1.15rem 1.2rem 1.2rem;
+}
+
+.klaro .cookie-notice .cn-body p,
+.klaro .cookie-modal p,
+.klaro .cookie-modal li {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.klaro .cookie-modal h1,
+.klaro .cookie-modal h2,
+.klaro .cookie-notice strong,
+.klaro .cookie-modal strong,
+.klaro .cookie-modal .cm-list-title {
+    color: #ffd700;
+}
+
+.klaro .cookie-notice a,
+.klaro .cookie-modal a {
+    color: #ffd700;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.klaro .cookie-notice .cm-btn,
+.klaro .cookie-modal .cm-btn {
+    min-height: 38px;
+    border: 1px solid #555;
+    border-radius: 999px;
+    background: #222;
+    color: #f4f4f4;
+    font-weight: 700;
+    padding: 0.55rem 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.klaro .cookie-notice .cm-btn:hover,
+.klaro .cookie-modal .cm-btn:hover,
+.klaro .cookie-notice .cm-btn:focus-visible,
+.klaro .cookie-modal .cm-btn:focus-visible {
+    border-color: #ffd700;
+    transform: translateY(-1px);
+}
+
+.klaro .cookie-notice .cm-btn.cm-btn-success,
+.klaro .cookie-notice .cm-btn.cm-btn-success-var,
+.klaro .cookie-modal .cm-btn.cm-btn-success,
+.klaro .cookie-modal .cm-btn.cm-btn-success-var {
+    border-color: transparent;
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    color: #111;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.25);
+}
+
+.klaro .cookie-notice .cm-btn.cm-btn-success:hover,
+.klaro .cookie-notice .cm-btn.cm-btn-success-var:hover,
+.klaro .cookie-modal .cm-btn.cm-btn-success:hover,
+.klaro .cookie-modal .cm-btn.cm-btn-success-var:hover {
+    background: linear-gradient(45deg, #ffe24a, #ffb52e);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.klaro .cookie-notice .cm-btn.cm-btn-info,
+.klaro .cookie-modal .cm-btn.cm-btn-info {
+    border-color: #ffd700;
+    background: transparent;
+    color: #ffd700;
+}
+
+.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider,
+.klaro .cookie-modal .cm-list-input.half-checked:checked + .cm-list-label .slider {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+}
+
+.klaro .cookie-modal .cm-list-label .slider::before {
+    background: #111;
+}
+
+.klaro .cookie-modal .cm-modal .cm-header,
+.klaro .cookie-modal .cm-modal .cm-footer,
+.klaro .cookie-modal .cm-switch-container {
+    border-color: rgba(255, 215, 0, 0.24);
+}
+
+.klaro .cookie-modal .cm-modal .hide:hover svg,
+.klaro .cookie-modal .cm-modal .hide:focus-visible svg {
+    stroke: #ffd700;
+}
+
+@media (max-width: 1023px) {
+    .klaro .cookie-notice:not(.cookie-modal-notice) {
+        border: 0;
+        border-top: 4px solid #ffd700;
+        border-radius: 14px 14px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .klaro {
+        --font-size: 14px;
+    }
+
+    .klaro .cookie-notice .cn-body {
+        padding: 0.9rem;
+    }
+}

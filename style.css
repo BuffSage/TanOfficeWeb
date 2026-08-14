@@ -2283,3 +2283,27 @@ footer {
 .blink {
     animation: blink 3s infinite;
 }
+
+.cookie-settings {
+    appearance: none;
+    border: 0;
+    background: none;
+    color: #ccc;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.cookie-settings:hover,
+.cookie-settings:focus-visible {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cookie-settings {
+        font-size: 0.8rem;
+    }
+}

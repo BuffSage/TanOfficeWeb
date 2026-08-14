@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         'services.html': 'leistungen.html',
         'download.html': 'download.html',
         'team.html':     'team.html',
-        'legal.html':    'rechtliches.html',
         'support.html':  'support.html'
     };
     const currentFile = window.location.pathname.split('/').pop() || 'index.html';
@@ -51,7 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <!-- Legal / imprint link -->
                 <div class="footer-legal">
-                    <a href="${path('legal.html')}">Legal</a>
+                    <a href="${rootPrefix}/rechtliches.html#datenschutz">Legal</a>
+                    <button type="button" class="cookie-settings" onclick="klaro.show(undefined, true)">Cookie settings</button>
                 </div>
 
                 <!-- Language toggle -->

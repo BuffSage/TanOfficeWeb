@@ -5,8 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TanOffice.de - Software for Tanning Studios</title>
+    <!-- Google Analytics (loaded only after Klaro consent) -->
+    <script type="text/plain" data-type="application/javascript" data-name="googleAnalytics"
+        data-src="https://www.googletagmanager.com/gtag/js?id=G-XJQZY2SK7S"></script>
+    <script type="text/plain" data-type="application/javascript" data-name="googleAnalytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XJQZY2SK7S');
+    </script>
     <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="stylesheet" href="../assets/klaro/klaro-0.7.22.min.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/klaro/theme.css">
+    <script defer src="../assets/klaro/klaro.js"></script>
+    <script defer data-config="klaroConfig" src="../assets/klaro/klaro-0.7.22.js"></script>
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -58,7 +71,7 @@
                     <div class="feature-card">
                         <i class="fa-solid fa-id-card fa-3x feature-icon"></i>
                         <h3>Cards</h3>
-                        <p>In-house membership cards — chip, magnetic stripe or QR code.</p>
+                        <p>In-house membership cards: chip, magnetic stripe, barcode, or QR code.</p>
                     </div>
                     <div class="feature-card">
                         <i class="fa-solid fa-microchip fa-3x feature-icon"></i>

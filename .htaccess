@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.html
+Redirect 301 /impressum /rechtliches.html#impressum
+Redirect 301 /impressum.html /rechtliches.html#impressum
+Redirect 301 /datenschutz /rechtliches.html#datenschutz
+Redirect 301 /AGB /rechtliches.html#agb

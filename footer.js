@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'leistungen.html': 'en/services.html',
         'download.html': 'en/download.html',
         'team.html': 'en/team.html',
-        'rechtliches.html': 'en/legal.html',
+        'rechtliches.html': 'en/index.html',
         'support.html': 'en/support.html'
     };
     const currentFile = window.location.pathname.split('/').pop() || 'index.html';
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="footer-legal">
                     <a href="${path('rechtliches.html')}">Rechtliches</a>
+                    <button type="button" class="cookie-settings" onclick="klaro.show(undefined, true)">Cookie-Einstellungen</button>
                 </div>
 
                 <div class="footer-lang">

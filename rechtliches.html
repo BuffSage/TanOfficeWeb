@@ -8,15 +8,20 @@
     <meta name="description" content="Rechtliche Hinweise, Impressum und Datenschutzinformationen von TanOffice.de.">
     <link rel="canonical" href="https://www.tanoffice.de/rechtliches.html">
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJQZY2SK7S"></script>
-    <script>
+    <script type="text/plain" data-type="application/javascript" data-name="googleAnalytics"
+        data-src="https://www.googletagmanager.com/gtag/js?id=G-XJQZY2SK7S"></script>
+    <script type="text/plain" data-type="application/javascript" data-name="googleAnalytics">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-XJQZY2SK7S');
     </script>
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/klaro/klaro-0.7.22.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/klaro/theme.css">
+    <script defer src="assets/klaro/klaro.js"></script>
+    <script defer data-config="klaroConfig" src="assets/klaro/klaro-0.7.22.js"></script>
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -109,9 +114,9 @@
                                 E-Mail: Support@TanOffice.de</p>
 
                             <h3>2. Cookies und Google Analytics</h3>
-                            <p>Diese Website verwendet <strong>Google Analytics</strong>, einen Webanalysedienst der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Google Analytics setzt Cookies und ähnliche Technologien ein, um die Nutzung der Website zu analysieren und Berichte zu erstellen.</p>
-                            <p>Dabei werden u. a. folgende Daten erhoben: gekürzte IP-Adresse (IP-Anonymisierung ist aktiviert), besuchte Seiten, Sitzungsdauer und technische Geräteinformationen. Die erhobenen Daten werden auf Servern von Google in den USA gespeichert. Google ist unter dem EU-US Data Privacy Framework zertifiziert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der statistischen Auswertung).</p>
-                            <p>Sie können der Datenerhebung durch Google Analytics widersprechen, indem Sie das <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Browser-Add-on zur Deaktivierung von Google Analytics</a> installieren. Weitere Informationen finden Sie in den <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzhinweisen von Google</a>.</p>
+                            <p>Wir verwenden den Einwilligungsmanager Klaro. Er speichert Ihre Auswahl im technisch notwendigen Cookie <code>tanoffice-consent</code> für bis zu 365 Tage. Dieses Cookie enthält ausschließlich Ihre Einwilligungsentscheidung.</p>
+                            <p>Nur mit Ihrer Einwilligung lädt diese Website <strong>Google Analytics</strong>, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics setzt die Cookies <code>_ga</code> und <code>_ga_*</code>, um Nutzer und Sitzungen zu unterscheiden, und verarbeitet unter anderem besuchte Seiten, Sitzungsdaten, den ungefähren Standort sowie Browser- und Geräteinformationen.</p>
+                            <p>Rechtsgrundlagen sind Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO sowie § 25 Abs. 1 TDDDG. Google Analytics wird vor Ihrer Einwilligung nicht geladen. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über „Cookie-Einstellungen“ im Seitenfuß widerrufen; dabei entfernt Klaro die zugehörigen Cookies. Weitere Informationen finden Sie in den <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzhinweisen von Google</a>.</p>
 
                             <h3>3. Datenerhebung und -verwendung</h3>
                             <p>Wir erheben personenbezogene Daten nur dann, wenn Sie uns diese freiwillig zur Verfügung
@@ -244,7 +249,7 @@
     <script src="script.js"></script>
     <script src="footer.js"></script>
     <script>
-        function showTab(tabName, event) {
+        function activateTab(tabName) {
             // Hide all tab panels
             const panels = document.querySelectorAll('.tab-panel');
             panels.forEach(panel => panel.classList.remove('active'));
@@ -254,11 +259,25 @@
             buttons.forEach(button => button.classList.remove('active'));
 
             // Show selected tab panel
-            document.getElementById(tabName).classList.add('active');
+            const panel = document.getElementById(tabName);
+            if (!panel) return;
+            panel.classList.add('active');
+
+            const button = document.querySelector(`.tab-button[onclick*="'${tabName}'"]`);
+            if (button) button.classList.add('active');
+        }
+
+        function showTab(tabName, event) {
+            activateTab(tabName);
 
             // Add active class to clicked button
-            event.target.classList.add('active');
+            if (event) event.target.classList.add('active');
+            history.replaceState(null, '', '#' + tabName);
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.location.hash) activateTab(window.location.hash.substring(1));
+        });
     </script>
 </body>
 
